@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #000;
+        }
+
+        .color-circle {
+            width: 300px;
+            height: 300px;
+            position: absolute;
+            left: calc(50% - 150px);
+            top: calc(50% - 150px);
+            border-radius: 50%;
+
+            box-shadow: inset 0px 0px 10px #fff,
+                inset 10px 0px 80px #f0f,
+                inset -10px 0px 80px #0ff,
+                inset 10px 0px 150px #f0f,
+                inset -10px 0px 150px #0ff,
+                -10px 0px 80px #f0f,
+                10px 0px 80px #0ff;
+        }
+
+        .sun {
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            left: calc(50% - 25px);
+            top: calc(50% - 25px);
+            background-color: #fff;
+            /* border: 1px solid #fff; */
+            border-radius: 50%;
+
+            box-shadow: 0px 0px 50px 30px #fff,
+                0px 0px 50px 40px #ff0,
+                inset 0px 0px 30px #fff;
+            /* inset 0px 0px 30px #ff0; */
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- <div class="color-circle"></div> -->
+    <div class="sun"></div>
+
+</body>
+
+</html>
