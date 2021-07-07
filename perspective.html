@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>perspective</title>
+    <style>
+        :root {
+            height: 100%;
+        }
+
+        body {
+            perspective: 800px;
+            position: relative;
+            height: 100%;
+        }
+
+        .demo1,
+        .demo2,
+        .demo3,
+        .demo4,
+        .demo5 {
+            width: 200px;
+            height: 200px;
+            background-image: url(./steps-img/perspective1.jpg);
+            background-size: cover;
+            position: absolute;
+            top: 300px;
+            left: 100px;
+
+            transform: rotateY(45deg);
+        }
+
+        .demo2 {
+            left: 320px;
+            background-image: url(./steps-img/perspective2.jpg);
+        }
+
+        .demo3 {
+            left: 540px;
+            background-image: url(./steps-img/perspective1.jpg);
+        }
+
+        .demo4 {
+            left: 760px;
+            background-image: url(./steps-img/perspective2.jpg);
+        }
+
+        .demo5 {
+            left: 980px;
+            background-image: url(./steps-img/perspective1.jpg);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="demo1"></div>
+    <div class="demo2"></div>
+    <div class="demo3"></div>
+    <div class="demo4"></div>
+    <div class="demo5"></div>
+
+    <script>
+        document.body.onmousemove = function (e) {
+
+            this.style.perspectiveOrigin = e.pageX + 'px' + ' ' + e.pageY + 'px';
+        }
+    </script>
+</body>
+
+</html>

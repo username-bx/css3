@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>horse</title>
+    <style>
+        .horse {
+            width: 200px;
+            height: 100px;
+            border: 1px solid red;
+            position: absolute;
+            left: calc(50% - 100px);
+            top: 100px;
+            overflow: hidden;
+        }
+
+        img {
+            /* animation: horse 1s step-end infinite; */
+            animation: newhorse 1s steps(12, end) infinite;
+        }
+
+        @keyframes newhorse {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-2400px);
+            }
+        }
+
+        @keyframes horse {
+            0% {
+                transform: translateX(0);
+            }
+
+            8% {
+                transform: translateX(-200px);
+            }
+
+            16% {
+                transform: translateX(-400px);
+            }
+
+            24% {
+                transform: translateX(-600px);
+            }
+
+            32% {
+                transform: translateX(-800px);
+            }
+
+            40% {
+                transform: translateX(-1000px);
+            }
+
+            48% {
+                transform: translateX(-1200px);
+            }
+
+            56% {
+                transform: translateX(-1400px);
+            }
+
+            64% {
+                transform: translateX(-1600px);
+            }
+
+            72% {
+                transform: translateX(-1800px);
+            }
+
+            80% {
+                transform: translateX(-2000px);
+            }
+
+            88% {
+                transform: translateX(-2200px);
+            }
+
+            94% {
+                transform: translateX(-2200px);
+            }
+
+            100% {
+                transform: translateX(-2200px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="horse">
+        <img src="./steps-img/horse.png" alt="">
+    </div>
+</body>
+
+</html>
