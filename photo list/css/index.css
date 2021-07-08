@@ -19,14 +19,19 @@ ul {
     border-radius: 20px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
-.wrap ul li {
+.wrap li {
     width: 16%;
     height: 100%;
     background-color: #99f;
     border-radius: 20px;
     overflow: hidden;
     position: relative;
+
+    transition: width 1s linear, height .5s linear 1s;
+
+
 }
 
 .wrap ul li .bg{
@@ -82,4 +87,67 @@ ul {
     position: absolute;
     top: 50%;
     left: 40%;
+    font-size: 16px;
+    color: #fff;
+}
+
+
+
+.menu .active {
+    width: 100%;
+}
+.menu li:not(.active) {
+    width: 0;
+    height: 0;
+}
+.menu li {
+    transition: height 1s linear, width .5s linear 1s;
+}
+.menu li .header{
+    opacity: 1;
+    transition: opacity .5s linear 1.5s;
+}
+.menu li .font{
+    opacity: 0;
+}
+.menu li .close {
+    transform: rotate(360deg);
+    transition: .5s linear 1.5s;
+}
+
+
+.wrap .header {
+    width: 100%;
+    position: absolute;
+    top: 10px;
+    display: flex;
+    justify-content: space-between;
+    opacity: 0;
+    padding: 0px 20px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+
+
+/* close */
+.wrap li .close {
+    width: 20px;
+    height: 20px;
+    position: relative;
+}
+.wrap li .close::before, .wrap li .close::after {
+    content: '';
+    width: 20px;
+    height: 2px;
+    position: absolute;
+    background-color: #fff;
+    top: 50%;
+    margin-top: -2px;
+}
+.wrap li .close::before {
+    transform: rotate(45deg);
+}
+.wrap li .close::after {
+    transform: rotate(-45deg);
 }
