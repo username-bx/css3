@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="./window.js"></script>
+    <style>
+        .q1 {
+            width: 100px;
+            height: 100px;
+            background-image: linear-gradient(0deg, red, green);
+
+
+
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .demo {
+
+            background-color: #abcdef;
+
+
+            /* auto 能分配剩余空间 */
+            margin-left: auto;
+            margin-right: auto;
+
+
+            /* 定位的四个方向，可以改变元素的尺寸，不会相互矛盾 */
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+
+            /* 设置元素的可视化大小 */
+            width: 100px;
+            height: 100px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="q1"></div>
+
+
+    <div class="demo"></div>
+</body>
+
+</html>
